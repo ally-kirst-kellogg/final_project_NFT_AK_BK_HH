@@ -1,0 +1,89 @@
+<!-- START copy -->
+<!-- HTML SKELETON -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css">
+    <link rel="stylesheet" href="format.css">
+</head>
+<body>
+    <!-- SETUP LINKS -->
+      <!-- FIREBASE CONFIG -->
+      <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/ui/4.7.3/firebase-ui-auth.js"></script>
+      <script>
+      var firebaseConfig = {
+          apiKey: "AIzaSyBlxGQB0zkHA6PtRFQcjb1Ek0z2h2TK_bU",
+          authDomain: "nft-marketplace-a02be.firebaseapp.com",
+          databaseURL: "https://nft-marketplace-a02be-default-rtdb.firebaseio.com",
+          projectId: "nft-marketplace-a02be",
+          storageBucket: "nft-marketplace-a02be.appspot.com",
+          messagingSenderId: "833934020342",
+          appId: "1:833934020342:web:d9a482926f0a4c16c326d7",
+          measurementId: "G-4DX867X47E"
+      }
+      firebase.initializeApp(firebaseConfig);
+      </script>
+      <!-- JS LINKS -->
+      <script src="index.js"></script>
+    <!-- SITE -->
+      <!-- AUTH LOGIN PROMPT -->
+      <span class="ml-auto text-sm sign-in-or-sign-out"></div>
+      <!-- NAVIGATION -->
+      <div title="navigation" class="navigation">
+        <header class="md:flex m-8">
+            <div class="md:w-1/3 p-4">
+                <p class="text-3xl text-white text-left font-bold m-6">NFTListing</p>
+            </div>
+            <div class="md:w-1/3 m-8">
+                <div class="nav">
+                    <a href="index.html">Buy</a>
+                    <a class="active" href="sell.html">Sell</a>
+                    <a href="profile.html">Profile</a>
+                    <a href="aboutUs.html">About Us</a>
+                </div>
+            </div>
+            <div class="md:w-1/6">
+                <p class="text-white text-right p-6">(Profile Pic Placeholder)</p>
+            </div>
+            <div class="md:w-1/6">
+                <p class="sign-in-or-sign-out text-white text-right md:text-right p-6" id="sign-in-or-sign-out"><a
+                    href="index.html">Log Out</a></p>
+            </div>
+        </header>
+      </div>
+<!-- END copy of HTML SKELETON, AUTH LOGIN PROMPT, and NAVIGATION. After copying...
+  - Move active navigation class="active" to current page
+-->
+      <!-- PAGE TITLE -->
+      <div title="page-title" class="page-title">
+          <!-- replace page title here -->
+          <h1 class="text-3xl md:text-3xl p-8 text-white">Post Your NFT</h1>
+      </div>
+      <!-- PAGE CONTENT -->
+      <div title="page-content" class="page-content">
+        <div class="m-8">
+            <div style= "border:gray">
+                <form netlify class="mx-auto mt-8 w-64">
+                    <label class="block mt-4 font-bold text-left" for="name">NFT Image:</label>
+                    <input class="p-2 w-64 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500 focus:border-purple-500" type="image" id="name" name="name">
+                    <label class = "block mt-4 font-bold text-left" for="name">NFT Title:</label>
+                    <input class="p-2 w-64 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500 focus:border-purple-500" type="text" id="name" name="name">
+                    <label class="block mt-4 font-bold" for="favorite-color">Owner:</label>
+                    <input class="p-2 w-64 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500 focus:border-purple-500" type="text" id="favorite-color" name="favoriteColor">
+                    <label class="block mt-4 font-bold" for="favorite-color">Sell Price:</label>
+                    <input class="p-2 w-64 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500 focus:border-purple-500" type="text" id="favorite-color" name="favoriteColor">
+                    <button class="block mt-4 text-white bg-purple-500 rounded px-4 py-2">upload file</button>
+                </form>
+            </div>
+        </div>
+      </div>
+</body>
+</html>
