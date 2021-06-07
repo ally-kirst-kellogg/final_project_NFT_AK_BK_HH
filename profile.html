@@ -1,0 +1,73 @@
+<!-- START copy section to each html page -->
+
+<!-- html skeleton -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css">
+    <link rel="stylesheet" href="format.css">
+</head>
+
+<body>
+    <!-- Firebase config -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.7.3/firebase-ui-auth.js"></script>
+
+    <script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyBlxGQB0zkHA6PtRFQcjb1Ek0z2h2TK_bU",
+        authDomain: "nft-marketplace-a02be.firebaseapp.com",
+        databaseURL: "https://nft-marketplace-a02be-default-rtdb.firebaseio.com",
+        projectId: "nft-marketplace-a02be",
+        storageBucket: "nft-marketplace-a02be.appspot.com",
+        messagingSenderId: "833934020342",
+        appId: "1:833934020342:web:d9a482926f0a4c16c326d7",
+        measurementId: "G-4DX867X47E"
+    }
+    
+    firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <!-- js links -->
+    <script src="index.js"></script>
+
+    <!-- login prompt -->
+    <span class="ml-auto text-sm sign-in-or-sign-out"></div>
+
+    <!-- navigation -->
+    <header class="md:flex m-8">
+        <div class="md:w-1/3 p-4">
+            <p class="text-3xl text-white text-left font-bold m-6">NFTListing</p>
+        </div>
+        <div class="md:w-1/3 m-8">
+            <div class="nav">
+                <a href="index.html">Buy</a>
+                <a href="sell.html">Sell</a>
+                <a class="active" href="profile.html">Profile</a>
+                <a href="aboutUs.html">About Us</a>
+            </div>
+        </div>
+        <div class="md:w-1/6">
+            <p class="text-white text-right p-6">(Profile Pic Placeholder)</p>
+        </div>
+        <div class="md:w-1/6">
+            <p class="sign-in-or-sign-out text-white text-right md:text-right p-6" id="sign-in-or-sign-out"><a
+                href="index.html">Log Out</a></p>
+        </div>
+
+    </header>
+
+<!-- END copy section (be sure to update the active navigation label when copying)-->
+
+    <div class="accountDetails"></div>
+    </body>
+
+</html>
