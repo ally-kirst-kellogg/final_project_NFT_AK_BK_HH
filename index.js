@@ -28,7 +28,7 @@ firebase.auth().onAuthStateChanged(async function(user) {
     // show navigation instructions
 
     // Build the URL for our posts API
-    let url = `/.netlify/functions/nfts`
+    let url = `/.netlify/functions/get_nfts`
   
     // Fetch the url, wait for a response, store the response in memory
     let response = await fetch(url)
