@@ -28,7 +28,7 @@ firebase.auth().onAuthStateChanged(async function(user) {
     // show navigation instructions
 
     // Build the URL for our posts API
-    let url = `/.netlify/functions/nft_listing`
+    let url = `/.netlify/functions/nfts`
   
     // Fetch the url, wait for a response, store the response in memory
     let response = await fetch(url)
@@ -40,7 +40,7 @@ firebase.auth().onAuthStateChanged(async function(user) {
     console.log(json)
   
     // Grab a reference to the element with class name "posts" in memory
-    let nftsDiv = document.querySelector(`.nft_listing`)
+    let nftsDiv = document.querySelector(`.nfts`)
   
     // Loop through the JSON data, for each Object representing a nft:
     for (let i=0; i < json.length; i++) {
@@ -54,15 +54,11 @@ firebase.auth().onAuthStateChanged(async function(user) {
       nftsDiv.insertAdjacentHTML(`beforeend`, `
         <div class="md:mt-16 mt-8">
           <div class="md:mx-0 mx-4 mt-8">
-            <span class="font-bold text-xl">${nft.nftName}</span>
+            <span class="font-bold text-xl">${nft.nftTitle}</span>
           </div>
 
           <div class="md:mx-0 mx-4 mt-8">
-            <span class="font-bold text-xl">${nft.nftCreator}</span>
-          </div>
-
-          <div class="md:mx-0 mx-4 mt-8">
-             <span class="font-bold text-xl">${nft.nftOwner}</span>
+             <span class="font-bold text-xl">${nft.owner}</span>
           </div>
 
           <div class="md:mx-0 mx-4 mt-8">
@@ -70,7 +66,7 @@ firebase.auth().onAuthStateChanged(async function(user) {
          </div>
       
           <div class="my-8">
-            <img src="${nft.imageUrl}" class="w-full">
+            <img src="${nft.nftImage}" class="w-full">
       `)
     }
 
