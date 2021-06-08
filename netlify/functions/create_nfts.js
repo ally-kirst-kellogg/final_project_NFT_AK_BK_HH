@@ -11,7 +11,7 @@ exports.handler = async function (event) {
     let owner = body.owner
     let sellPrice = body.sellPrice
 
-    console.log("Called create_nfts.js");
+    console.log("called create_nfts.js");
     console.log(`username is ${username}`)
 
     let nft = {

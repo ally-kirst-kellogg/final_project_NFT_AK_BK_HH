@@ -1,4 +1,3 @@
-
 firebase.auth().onAuthStateChanged(async function(user) {
   if (user) {
     // signed in
