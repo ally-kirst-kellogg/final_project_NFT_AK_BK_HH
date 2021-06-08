@@ -32,7 +32,7 @@
       firebase.initializeApp(firebaseConfig);
       </script>
       <!-- JS LINKS -->
-      <script src="index.js"></script>
+      <script src="sell.js"></script>
     <!-- SITE -->
       <!-- AUTH LOGIN PROMPT -->
       <span class="ml-auto text-sm sign-in-or-sign-out"></div>
@@ -72,19 +72,15 @@
         <div class="m-8">
             <div style= "border:gray">
                 <form netlify class="mx-auto mt-8 w-64">
-                    <label class="block mt-4 font-bold text-left" for="name">NFT Image:</label>
-                    <input class="p-2 w-64 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500 focus:border-purple-500" type="image">
+                    <label class="block mt-4 font-bold text-left" for="name">NFT Image Preview (URL):</label>
+                        <input id="nftImage" name="nftImage" class="p-2 w-64 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500 focus:border-purple-500" type="text">
                     <label class = "block mt-4 font-bold text-left" for="name">NFT Title:</label>
-                    <input class="p-2 w-64 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500 focus:border-purple-500" type="text">
+                        <input id="nftTitle" name="nftTitle" class="p-2 w-64 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500 focus:border-purple-500" type="text">
                     <label class="block mt-4 font-bold" for="favorite-color">Owner:</label>
-                    <input class="p-2 w-64 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500 focus:border-purple-500" type="text">
+                        <input id="owner" name="owner" class="p-2 w-64 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500 focus:border-purple-500" type="text">
                     <label class="block mt-4 font-bold" for="favorite-color">Sell Price:</label>
-                    <input class="p-2 w-64 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500 focus:border-purple-500" type="text">
-                    <label class="block mt-4 font-bold" for="favorite-color">Host Coin:</label>
-                    <input class="p-2 w-64 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500 focus:border-purple-500" type="text">
-                    <label class="block mt-4 font-bold" for="favorite-color">File Format:</label>
-                    <input class="p-2 w-64 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500 focus:border-purple-500" type="text">
-                    <button class="block mt-4 text-white bg-purple-500 rounded px-4 py-2">upload file</button>
+                        <input id="sellPrice" name="sellPrice" class="p-2 w-64 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500 focus:border-purple-500" type="text">
+                    <button class="block mt-4 text-white bg-purple-500 rounded px-4 py-2">Submit</button>
                 </form>
             </div>
         </div>
