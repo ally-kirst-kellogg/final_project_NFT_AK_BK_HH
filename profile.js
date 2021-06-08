@@ -28,11 +28,6 @@ firebase.auth().onAuthStateChanged(async function(user) {
     document.querySelector(".user-email").insertAdjacentHTML("beforeend", `
     <h1 class="user-email text-3xl md:text-3xl p-8 text-white">Email: ${email}</h1>
     `)
-    let profilePicture = firebase.auth().currentUser.photoUrl
-    console.log(photoUrl);
-    document.querySelector(".profile-picture").insertAdjacentHTML("beforeend", `
-    <h1 class="user-name text-3xl md:text-3xl p-8 text-white">Name: ${displayName}</h1>
-    `)
 
       // show navigation instructions
   
