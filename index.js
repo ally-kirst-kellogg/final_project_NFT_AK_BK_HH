@@ -53,19 +53,21 @@ firebase.auth().onAuthStateChanged(async function(user) {
       nftsDiv.insertAdjacentHTML(`beforeend`, `
         <div class="md:mt-16 mt-8">
           <div class="md:mx-0 mx-4 mt-8">
-            <span class="font-bold text-xl">${nft.nftTitle}</span>
+            <span class="font-bold text-xl font-semibold m-8">NFT Name: ${nft.nftTitle}</span>
           </div>
 
           <div class="md:mx-0 mx-4 mt-8">
-             <span class="font-bold text-xl">${nft.owner}</span>
+             <span class="font-semibold m-8 text-m">Current Owner: ${nft.owner}</span>
           </div>
 
           <div class="md:mx-0 mx-4 mt-8">
-            <span class="font-bold text-xl">${nft.sellPrice}</span>
+            <span class="font-semibold m-8 text-m">Price: $${nft.sellPrice}</span>
          </div>
-      
-          <div class="my-8">
+         <div class="m-4 md:flex"> 
+          <div class="mt-4 md:w-1/2 border-8">
             <img src="${nft.nftImage}" class="w-full">
+            </div>
+            </div>
       `)
     }
 
